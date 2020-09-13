@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'home-constructor',
+    loadChildren: () => import('./home-constructor/home-constructor.module').then( m => m.HomeConstructorPageModule)
+  },
+  {
+    path: 'credits',
+    loadChildren: () => import('./credits/credits.module').then( m => m.CreditsPageModule)
+  },
 ];
 
 @NgModule({
